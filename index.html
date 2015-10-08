@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<!--
+ Aaron Robert Wilson
+ October 10, 2015 - Week 2
+ FWF Course | 201510-01
+ Student ID: 0004619821
+ Professor: Sean Bernath
+ Full Sail University
+-->
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Aaron's Employee Directory App</title>
+    <meta name="author" content="Aaron Robert Wilson">
+
+    <!--  for responsiveness on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css external file links -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- favicon link -->
+    <link rel="icon" type="image/png" href="images/fullsail_logo.png">
+
+</head>
+
+<body ng-app="aarons_app">
+
+<!--content container & controller -->
+<div id="container" ng-controller="employee_cntrl">
+
+
+    <h1><a href="index.html"><img id="logo" src="images/aaron.png">Aaron's Employee Directory</a></h1>
+
+    <!-- enter a new employee  -->
+    <div id="entry_form">
+
+        <h2>Enter A New Employee</h2>
+
+        <div id="form_section">
+            <form>
+                <input type="text" placeholder="Employee Full Name" ng-model="employee_name" />
+                <input type="text" placeholder="Position Title" ng-model="employee_position" />
+
+                <br><br>
+
+                <input type="text" placeholder="Street Address" ng-model="employee_street" />
+                <input id="cityInput" type="text" placeholder="City" ng-model="employee_city" />
+                <input id="stateInput" type="text" placeholder="State" ng-model="employee_state" />
+                <input id="zipInput" type="text" placeholder="Zip Code" ng-model="employee_zip" />
+
+                <br><br>
+
+                <input type="text" placeholder="Phone: (000) 000-0000" ng-model="employee_phone" />
+                <input type="email" placeholder="Email Address" ng-model="employee_email" />
+
+                <input type="button" name="resetBtn" id="reset_btn" value="Reset" ng-click="reset_form()" />
+                <input type="submit" name="addBtn" id="add_btn" value="Add Employee" ng-click="add_employee()" />
+            </form>
+        </div>
+    </div>
+    <!-- end - enter new employee area -->
+
+    <!-- employee directory area -->
+    <div id="directory_list">
+
+        <!-- add employee objects -->
+        <div class="emp" ng-repeat="emp in employee_array track by $id($index)">
+            <div class="name_title">
+                <img src="images/discard.png" class="delete_icon" ng-click="delete_employee(emp)" title="Delete Employee" alt="Delete Employee Icon" />
+                <h3>{{ emp.name }}</h3>
+                <h4>{{ emp.position }}</h4>
+            </div>
+
+            <div class="info">
+                <p>{{ emp.address }}<br>
+                    {{ emp.city }}, {{ emp.state }} {{ emp.zip }}</p>
+                <p>{{ emp.phone }}</p>
+                <p>{{ emp.email }}</p>
+            </div>
+        </div>
+    </div>
+    <!-- end - employee directory area -->
+</div>
+<!-- end - main content container -->
+
+<!-- start - footer area -->
+<footer>
+    <hr class="clear">
+    <p>&copy; 2015 Aaron Robert Wilson - Full Sail University<br>
+        FWF Course | 201510-01<br>
+        Week 2 Assignment - Employee Directory AngularJS App</p>
+</footer>
+<!-- end - footer area -->
+
+<!-- javascript & angular external file links -->
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/dataService.js"></script>
+
+</body>
+<!-- end of html document -->
+
+</html>

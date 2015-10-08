@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+ Aaron Robert Wilson
+ October 10, 2015 - Week 2
+ FWF Course | 201510-01
+ Student ID: 0004619821
+ Professor: Sean Bernath
+ Full Sail University
+*/
+
+/*    _______________    */
+/* __| global styles |__ */
+
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue";
+    /*background: #373834;*/
+    background: #ffffff;
+    position: relative;
+}
+
+#container {
+    width: 94%;
+    padding: 0 3%;
+    overflow: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+
+#entry_form, #directory_list {
+    float: left;
+}
+
+#entry_form {
+    width: 37%;
+    padding: 0%;
+    background: hsla(36,18%,59%,.20);
+	border: 1px solid hsla(36,18%,59%,1.00);
+    margin: 0px 4px 4px 0px;
+    border-radius: 4px;
+    box-shadow: #d58512 0px 4px 4px 0px;
+}
+
+#form_section {
+    padding: 2% 4% 3%;
+    overflow: auto;
+}
+
+#directory_list {
+    width: 60%;
+	
+}
+
+.emp {
+    width: 45%;
+    margin: 0px 4.5px 9px 4.5px;
+    float: left;
+}
+
+.name_title {
+    background: hsla(40,85%,47%,1.00);
+	border: 1px solid hsla(36,18%,59%,1.00);
+    padding: 2.5% 0 2.5% 5%;
+    position: relative;
+    color: hsla(0,0%,100%,1.00);
+
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.info {
+    padding: 3% 10%;
+    font-size: 90%;
+	color: hsla(31,21%,60%,1.00);
+    background: hsla(36,18%,59%,0.20);
+	border: 1px solid hsla(36,18%,59%,1.00);
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+	box-shadow: #d58512 0px 4px 4px 0px;
+}
+
+/*    _________________    */
+/* __| headings & text |__ */
+
+h1 {
+    color: hsla(40,87%,47%,1.00);
+    font-size: 2em;
+	text-align: left;
+    margin: 4px 0px 10px 0px;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid hsla(36,18%,59%,1.00);
+	box-shadow: 0px 4px 4px 0px hsla(40,86%,47%,1.00);
+}
+
+h2 {
+	position: relative;
+	top: 0px;
+	left: 0px;
+    margin-top: 0%;
+    text-align: center;
+	width: 100%;
+    color: hsla(0,0%,100%,1.00);
+    font-size: 140%;
+    text-transform: Capitalize;
+	background: hsla(40,86%,47%,1.00);
+    padding: 10px 0px 20px 0px;
+    border-bottom: 1px solid #023B47;
+	    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+    font-style: italic;
+    font-weight: normal;
+    padding-top: 0.5%;
+    font-size: 85%;
+}
+
+footer p {
+	position: relative;
+	top: 0px;
+	bottom: 20px;
+}
+
+footer {
+    width: 100%;
+    margin: 1px auto;
+    text-align: center;
+    color: #dbdbdb;
+    font-size: .8em;
+    line-height: 14px;
+    letter-spacing: 1px;
+	background: hsla(36,18%,59%,1.00);
+}
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
+	position: relative;
+	bottom: 15px;
+    color: hsla(36,18%,59%,1.00);
+    text-decoration: none;
+}
+
+.info > p {
+    margin-top: 0;
+}
+
+.info p:last-child {
+    margin-bottom: 0;
+}
+
+#title_txt {
+    box-shadow: 0px 4px 4px 0px hsla(40,86%,47%,1.00);
+}
+
+/*    ________    */
+/* __| images |__ */
+
+img {
+    width: 24px;
+}
+
+#logo {
+	position: relative;
+	top: 15px;
+	width: 64px;
+	height: 64px;
+}
+
+.delete_icon {
+    position: absolute;
+    right: 0;
+    margin: 0 3%;
+}
+
+.delete_icon:hover {
+    cursor: pointer;
+    background: url("../images/discard-bg.png");
+}
+
+/*    _______    */
+/* __| forms |__ */
+
+input[type="text"], input[type="email"] {
+    width: 95.6%;
+	margin: 0 0 4% 0;
+    padding: 2% 2%;
+    font-size: 100%;
+    border: 1px solid #595241;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px 0px hsla(40,86%,47%,1.00);
+    
+}
+
+::-webkit-input-placeholder {
+   color: hsla(36,18%,59%,.50);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: hsla(36,18%,59%,.50);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: hsla(36,18%,59%,.50);  
+}
+
+:-ms-input-placeholder {  
+   color: hsla(36,18%,59%,.50);  
+}
+
+#cityInput {
+    width: 43%;
+}
+
+#stateInput {
+    width: 15%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+#zipInput {
+    width: 23.5%;
+}
+
+
+#add_btn, #reset_btn {
+    padding: 8px 8px;
+    background: hsla(40,86%,47%,1.00);
+    font-size: 80%;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    float: right;
+    margin-left: 5px;
+}
+
+#add_btn:hover, #reset_btn:hover {
+    background: hsla(36,18%,59%,1.00);
+}
+
+/*  ____________________  */
+/* |__  media queries __| */
+
+/* laptops */
+@media only screen
+and (max-width : 1330px) {
+
+    #stateInput {
+        margin-left: 0.6%;
+        margin-right: 0.6%;
+    }
+
+    h2 {
+        font-size: 150%;
+    }
+
+    h3 {
+        font-size: 100%;
+    }
+}
+
+/* tablet devices | ex: iPad | (portrait) */
+@media only screen and ( min-device-width : 768px ) and ( max-device-width : 899px ) and ( orientation : portrait ) , (min-width : 582px ) and (max-width : 1009px ){
+
+    h2 {
+        font-size: 130%;
+    }
+
+    .emp {
+        width: 100%;
+    }
+
+    #cityInput, #stateInput, #zipInput {
+        width: 95.6%;
+    }
+
+    #stateInput {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* smart phone devices | ex: iPhone 4 - 6 | (portrait & landscape)  */
+@media only screen
+and (max-device-width: 767px),
+(max-width : 767px) {
+
+    #entry_form, #directory_list {
+        float: none;
+        width: 100%;
+    }
+
+    #entry_form {
+        margin-top: 30px;
+    }
+
+    .emp {
+        width: 47%;
+        margin: 0 1.5% 3%;
+        float: left;
+    }
+
+    #cityInput {
+        width: 43%;
+    }
+
+    #stateInput {
+        width: 15%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+    }
+
+    #zipInput {
+        width: 23.5%;
+    }
+
+    input[type="text"], input[type="email"] {
+        margin: 0 0 1% 0;
+    }
+
+    #add_btn, #reset_btn {
+        margin-top: 1%;
+    }
+
+    h1 {
+        font-size: 250%;
+    }
+}
+
+/* smart phone devices | ex: iPhone 3 - legacy | (portrait & landscape) */
+@media only screen
+and (max-device-width: 580px),
+(max-width : 580px) {
+
+    .emp {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+/* smart phone devices | (portrait or landscape) */
+@media only screen
+and (max-device-width: 500px),
+(max-width : 500px) {
+
+    #cityInput, #stateInput, #zipInput {
+        width: 95.6%;
+    }
+
+    #stateInput {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    h1 {
+        font-size: 200%;
+        text-align: center;
+    }
+
+    input[type="text"], input[type="email"] {
+        margin: 0 0 2% 0;
+    }
+}
+
+/* smart phone devices | (portrait) */
+@media only screen
+and (max-device-width: 414px)
+and (orientation: portrait),
+(max-width: 414px) {
+
+    footer {
+        font-size: 50%;
+    }
+}
