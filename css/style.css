@@ -355,10 +355,22 @@ and (max-device-width: 767px),
 and (max-device-width: 580px),
 (max-width : 580px) {
 
+    h1 a {
+        position: relative;
+        bottom: 20px;
+        font-size: .6em;
+        line-height: 1em;
+    }
+
+    #entry_form {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
     .emp {
+        position: relative;
         width: 100%;
-        margin-right: 0;
-        margin-left: 0;
+        margin: 5px 0 5px 0;
     }
 }
 
