@@ -64,8 +64,11 @@ body {
 }
 
 .name_title {
-    background: hsla(40,85%,47%,1.00);
-	border: 1px solid hsla(36,18%,59%,1.00);
+    background: -webkit-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* Standard syntax (must be last) */
+    border: 1px solid hsla(36,18%,59%,1.00);
     padding: 2.5% 0 2.5% 5%;
     position: relative;
     color: hsla(0,0%,100%,1.00);
@@ -116,9 +119,12 @@ h2 {
     color: hsla(0,0%,100%,1.00);
     font-size: 140%;
     text-transform: Capitalize;
-	background: hsla(40,86%,47%,1.00);
+    background: -webkit-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* Standard syntax (must be last) */
     padding: 10px 0px 20px 0px;
-    border-bottom: 1px solid #023B47;
+    border-bottom: 1px solid hsla(36,18%,59%,1.00);
 	    -webkit-border-top-left-radius: 4px;
     -webkit-border-top-right-radius: 4px;
     -moz-border-radius-topleft: 4px;
@@ -150,7 +156,7 @@ footer {
     width: 100%;
     margin: 1px auto;
     text-align: center;
-    color: #dbdbdb;
+    color: hsla(0,0%,100%,1.00);
     font-size: .8em;
     line-height: 14px;
     letter-spacing: 1px;
@@ -212,7 +218,16 @@ input[type="text"], input[type="email"] {
     border: 1px solid #595241;
 	border-radius: 4px;
 	box-shadow: 0px 4px 4px 0px hsla(40,86%,47%,1.00);
-    
+    /* new */
+    -webkit-transition: background-color .75s ease;
+    -moz-transition: background-color .75s ease;
+    -o-transition: background-color .75s ease;
+    transition: background-color .75s ease;
+}
+
+input[type="text"]:focus {
+    background-color: hsla(40,86%,47%,1.00);
+    color: hsla(0,0%,100%,1.00);
 }
 
 ::-webkit-input-placeholder {
@@ -231,6 +246,7 @@ input[type="text"], input[type="email"] {
    color: hsla(36,18%,59%,.50);  
 }
 
+
 #cityInput {
     width: 43%;
 }
@@ -248,11 +264,15 @@ input[type="text"], input[type="email"] {
 
 #add_btn, #reset_btn {
     padding: 8px 8px;
+    background: -webkit-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, hsla(40,86%,47%,1.00), hsla(36,18%,59%,1.00), hsla(40,86%,47%,1.00)); /* Standard syntax (must be last) */
     background: hsla(40,86%,47%,1.00);
     font-size: 80%;
     font-weight: bold;
     border-radius: 4px;
-    color: #fff;
+    color: hsla(0,0%,100%,1.00);
     float: right;
     margin-left: 5px;
 }
@@ -308,18 +328,28 @@ and (max-width : 1330px) {
 and (max-device-width: 767px),
 (max-width : 767px) {
 
+    h1 a {
+        position: relative;
+        bottom: 20px;
+        font-size: .6em;
+        line-height: 1em;
+    }
+
     #entry_form, #directory_list {
         float: none;
         width: 100%;
     }
 
     #entry_form {
-        margin-top: 30px;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
 
     .emp {
+        position: relative;
         width: 47%;
-        margin: 0 1.5% 3%;
+        margin: 5px 1.5% 5px 0;
         float: left;
     }
 
@@ -338,7 +368,7 @@ and (max-device-width: 767px),
     }
 
     input[type="text"], input[type="email"] {
-        margin: 0 0 1% 0;
+        margin: 0 0 2% 0;
     }
 
     #add_btn, #reset_btn {
@@ -363,6 +393,7 @@ and (max-device-width: 580px),
     }
 
     #entry_form {
+        width: 99.2%;
         margin-top: 10px;
         margin-bottom: 5px;
     }
@@ -372,6 +403,11 @@ and (max-device-width: 580px),
         width: 100%;
         margin: 5px 0 5px 0;
     }
+
+    input[type="text"], input[type="email"] {
+        margin: 0 0 2% 0;
+    }
+
 }
 
 /* smart phone devices | (portrait or landscape) */
